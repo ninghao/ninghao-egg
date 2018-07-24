@@ -13,6 +13,11 @@ class DemoController extends Controller {
     // this.ctx.body = posts;
     await this.ctx.render('posts/index.njk', { posts });
   }
+
+  async getPost() {
+    const post = await this.ctx.service.demo.getPost(this.ctx.params.id);
+    await this.ctx.render('posts/show.njk', { post });
+  }
 }
 
 module.exports = DemoController;
