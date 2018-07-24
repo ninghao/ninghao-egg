@@ -11,7 +11,7 @@ class DemoController extends Controller {
   async posts() {
     const posts = await this.ctx.service.demo.listPost();
     // this.ctx.body = posts;
-    await this.ctx.render('posts/index.njk');
+    await this.ctx.render('posts/index.njk', { posts });
   }
 }
 
