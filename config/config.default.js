@@ -7,7 +7,13 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1532412146450_1382';
 
   // add your config here
-  config.middleware = [];
+  config.middleware = [
+    'demo',
+  ];
+
+  config.demo = {
+    demoOption: 'demo middleware config',
+  }
 
   config.view = {
     defaultViewEngine: 'nunjucks',
